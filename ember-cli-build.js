@@ -3,8 +3,11 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
-  let app = new EmberApp(defaults, {
-    // Add options here
+	let app = new EmberApp(defaults, {
+		babel: {
+			sourceMaps: 'inline',
+			plugins: ['@babel/plugin-transform-block-scoping'],
+		},
   });
 
   // Use `app.import` to add additional libraries to the generated
